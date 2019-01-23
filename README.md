@@ -28,7 +28,7 @@ For this task it can be an overkill, but I really wanted to show you the beauty 
 Using `Kotlin`, `Dagger` and `RxJava` is must-have for nowadays Android development.  
 
 ## ToDo
-CI integration
+CI integration  
 Checkstyle, lint, FindBugs, etc
 
 ## Bonus points 
