@@ -9,4 +9,7 @@ dependencies {
         exclude group: 'org.jetbrains'
         exclude group: 'org.jetbrains.kotlin'
     }
+
+    testImplementation Libraries.assertJ
+    testImplementation Libraries.junit
 }

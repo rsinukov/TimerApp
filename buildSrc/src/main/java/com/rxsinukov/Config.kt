@@ -14,8 +14,6 @@ object Versions {
     const val dagger = "2.20"
 
     // Testing
-    const val mockito = "2.10.0"
-    const val mockitoKotlin = "2.1.0"
     const val testRunner = "1.1.0"
 }
 
@@ -55,6 +53,6 @@ object Libraries {
     const val koptional = "com.gojuno.koptional:koptional:1.2.0"
 
     // Testing
-    const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
-    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
+    const val assertJ = "org.assertj:assertj-core:2.9.1"
+    const val junit = "junit:junit:4.12"
 }

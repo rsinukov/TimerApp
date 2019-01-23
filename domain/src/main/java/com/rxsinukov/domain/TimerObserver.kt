@@ -44,7 +44,7 @@ class TimerObserver internal constructor(
         updateTime(currentTime + diff)
     }
 
-    fun updateTime(time: Time) {
+    private fun updateTime(time: Time) {
         val timeToSet = normalise(time.millis)
         timeTrigger.onNext(Time(timeToSet))
     }

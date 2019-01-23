@@ -47,6 +47,7 @@ android {
 
 dependencies {
     implementation project(":common")
+    implementation project(":common_android")
     implementation project(":domain")
 
     kapt Libraries.daggerKapt
@@ -54,6 +55,4 @@ dependencies {
     implementation Libraries.appCompat
     implementation Libraries.rxBindingV4
     implementation Libraries.rxAndroid
-
-    testImplementation Libraries.mockitoKotlin
 }
