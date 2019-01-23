@@ -47,18 +47,13 @@ android {
 
 dependencies {
     implementation project(":common")
+    implementation project(":domain")
 
     kapt Libraries.daggerKapt
 
-    implementation Libraries.gson
     implementation Libraries.appCompat
     implementation Libraries.rxBindingV4
     implementation Libraries.rxAndroid
-    implementation Libraries.timber
-    implementation Libraries.retrofit
-    implementation Libraries.retrofitGsonConverter
-    implementation Libraries.retrofitRxJavaAdapter
-    implementation Libraries.okHttpLogging
 
     testImplementation Libraries.mockitoKotlin
 }

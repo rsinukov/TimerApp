@@ -1,0 +1,10 @@
+apply plugin: 'com.android.library'
+
+apply from: '../common_gradle/common_android.gradle'
+
+dependencies {
+    implementation project(":common")
+
+    implementation Libraries.appCompat
+    implementation Libraries.androidAnnotations
+}
