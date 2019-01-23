@@ -14,6 +14,8 @@ object Versions {
 
     // Testing
     const val testRunner = "1.1.0"
+    const val mockito = "2.10.0"
+    const val mockitoKotlin = "2.1.0"
 }
 
 object BuildPlugins {
@@ -55,4 +57,6 @@ object Libraries {
     // Testing
     const val assertJ = "org.assertj:assertj-core:2.9.1"
     const val junit = "junit:junit:4.12"
+    const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
 }

@@ -21,7 +21,7 @@ class TimerPresenter @Inject constructor(
     override fun intentionToActionMapper(): (TimerIntention) -> TimerAction = {
         when (it) {
             TimerIntention.Initial -> TimerAction.Initial(
-                timeToCount = Time.create(70, TimeUnit.SECONDS),
+                timeToCount = Time.create(2, TimeUnit.MINUTES),
                 period = Time.create(100, TimeUnit.MILLISECONDS),
                 maxTime = Time.create(2, TimeUnit.MINUTES)
             )

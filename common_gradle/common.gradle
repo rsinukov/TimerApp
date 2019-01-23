@@ -12,4 +12,6 @@ dependencies {
 
     testImplementation Libraries.assertJ
     testImplementation Libraries.junit
+    testImplementation Libraries.mockito
+    testImplementation Libraries.mockitoKotlin
 }
