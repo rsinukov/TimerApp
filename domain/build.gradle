@@ -1,0 +1,5 @@
+apply from: '../common_gradle/common_java.gradle'
+
+dependencies {
+    implementation project(":common")
+}

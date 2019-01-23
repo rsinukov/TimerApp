@@ -14,3 +14,7 @@ annotation class IoScheduler
 @Retention(AnnotationRetention.RUNTIME)
 annotation class ComputationScheduler
 
+@Qualifier
+@Retention(AnnotationRetention.RUNTIME)
+annotation class TimeScheduler
+
