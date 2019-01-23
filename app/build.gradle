@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply from: '../common_gradle/common_android.gradle'
+apply plugin: 'kotlin-kapt'
+
+kapt {
+    useBuildCache = true
+}
+
+android {
+
+    defaultConfig {
+        applicationId Android.applicationId
+        targetSdkVersion Android.targetSdk
+        versionCode Android.releaseCode
+        versionName Android.releaseName
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            defaultConfig.versionName = defaultConfig.versionName + ".local-build"
+            defaultConfig.versionCode = 1
+            defaultConfig.resConfigs("en", "xxhdpi")
+
+            splits.abi.enable = false
+            aaptOptions.cruncherEnabled = false
+        }
+    }
+
+    testOptions {
+        // Always show the result of every unit test, even if it passes.
+        unitTests.all {
+            testLogging {
+                events 'skipped', 'failed', 'standardOut', 'standardError'
+                maxHeapSize = "1g"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(":common")
+
+    kapt Libraries.daggerKapt
+
+    implementation Libraries.gson
+    implementation Libraries.appCompat
+    implementation Libraries.rxBindingV4
+    implementation Libraries.rxAndroid
+    implementation Libraries.timber
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.retrofitRxJavaAdapter
+    implementation Libraries.okHttpLogging
+
+    testImplementation Libraries.mockitoKotlin
+}

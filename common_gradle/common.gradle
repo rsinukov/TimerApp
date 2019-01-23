@@ -1,0 +1,12 @@
+dependencies {
+    implementation Libraries.dagger
+    implementation Libraries.rxJava
+
+    implementation(Libraries.kotlin) {
+        exclude group: 'org.jetbrains'
+    }
+    implementation(Libraries.koptional) {
+        exclude group: 'org.jetbrains'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+}
