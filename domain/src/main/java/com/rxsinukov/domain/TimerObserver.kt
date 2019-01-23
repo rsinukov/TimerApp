@@ -7,6 +7,9 @@ import io.reactivex.subjects.BehaviorSubject
 import java.util.concurrent.TimeUnit
 import kotlin.math.min
 
+/**
+ * Emits new time change events. Can be adjusted by [incTime]
+ */
 class TimerObserver internal constructor(
     private val maxTime: Time,
     private val period: Time,
@@ -38,7 +41,9 @@ class TimerObserver internal constructor(
         timeTrigger.onNext(currentTime)
     }
 
-    fun observeTime(): Observable<Time> = timerObservable
+    fun observeTime(): Observable<Time> {
+        return timerObservable
+    }
 
     fun incTime(diff: Time) {
         updateTime(currentTime + diff)

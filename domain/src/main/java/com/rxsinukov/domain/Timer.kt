@@ -6,6 +6,9 @@ import io.reactivex.Scheduler
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
+/**
+ * Creates and starts new TimerObserver
+ */
 @Reusable
 class Timer @Inject constructor(
     @TimeScheduler private val timerScheduler: Scheduler

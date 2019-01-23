@@ -1,6 +1,7 @@
 package com.rxsinukov.domain
 
 import io.reactivex.schedulers.TestScheduler
+import org.assertj.core.api.Java6Assertions.assertThatThrownBy
 import org.junit.Before
 import org.junit.Test
 import java.util.concurrent.TimeUnit
@@ -89,5 +90,20 @@ class TimerObserverTest {
 
         testScheduler.advanceTimeBy(1, TimeUnit.MILLISECONDS)
         testObserver.assertValues(Time(10), Time(9), Time(15), Time(14))
+    }
+
+    @Test
+    fun `incTime should throw if result time is less then zero`() {
+        val observer = TimerObserver(
+            timeToCount = Time(10),
+            period = Time(1),
+            maxTime = Time(15),
+            timerScheduler = testScheduler
+        )
+
+        observer.start()
+
+        assertThatThrownBy { observer.incTime(Time(-15)) }
+            .hasMessageStartingWith("Time can not be less then zero, was:")
     }
 }

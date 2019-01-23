@@ -8,6 +8,9 @@ import java.util.*
 import javax.inject.Inject
 import javax.inject.Provider
 
+/**
+ * Uses runtime generated keys for storing components. Component will leave as long as key lives
+ */
 class ComponentsHolder {
 
     companion object {

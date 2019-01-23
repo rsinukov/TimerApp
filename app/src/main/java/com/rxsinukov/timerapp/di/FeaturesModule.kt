@@ -10,6 +10,9 @@ import dagger.multibindings.IntoMap
         TimerComponent::class
     ]
 )
+/**
+ * Put your screen components here
+ */
 interface FeaturesModule {
 
     @Binds

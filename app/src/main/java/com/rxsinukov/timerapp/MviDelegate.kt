@@ -9,6 +9,9 @@ import com.rxsinukov.timerapp.di.MyComponent
 import io.reactivex.disposables.CompositeDisposable
 import java.util.*
 
+/**
+ * Wraps generation and saving instance of a component key through config changes
+ */
 class MviDelegate<Component : MyComponent>(
     private val activity: Activity,
     private val disposable: CompositeDisposable,
