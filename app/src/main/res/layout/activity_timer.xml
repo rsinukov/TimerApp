@@ -6,16 +6,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context=".CounterActivity">
+        tools:context=".screens.timer.TimerActivity">
 
     <TextView
-            android:id="@+id/activity_counter_time_label"
+            android:id="@+id/activity_timer_time_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="2:00:00"/>
 
     <Button
-            android:id="@+id/activity_counter_inc_button"
+            android:id="@+id/activity_timer_inc_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plus_ten"/>

@@ -4,7 +4,6 @@ object Versions {
     // AndroidX
     const val appCompat = "1.0.0"
     const val design = "1.0.0"
-    const val lifecycle = "2.0.0"
     const val annotations = "1.0.0"
 
     const val rxJava = "2.1.0"
@@ -51,6 +50,7 @@ object Libraries {
 
     // Other
     const val koptional = "com.gojuno.koptional:koptional:1.2.0"
+    const val timber = "com.jakewharton.timber:timber:4.7.1"
 
     // Testing
     const val assertJ = "org.assertj:assertj-core:2.9.1"

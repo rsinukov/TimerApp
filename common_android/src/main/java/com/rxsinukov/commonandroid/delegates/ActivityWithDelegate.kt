@@ -13,12 +13,12 @@ open class ActivityWithDelegate : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        delegates.forEach { it.onCreate(savedInstanceState) }
 
         val lastInstance = lastCustomNonConfigurationInstance as? Map<*, *>
         if (lastInstance != null) {
             delegates.forEach { it.onRetainCustomNonConfigurationInstance(lastInstance[it.key]) }
         }
+        delegates.forEach { it.onCreate(savedInstanceState) }
     }
 
     override fun onStart() {

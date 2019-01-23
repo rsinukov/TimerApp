@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">CounterApp</string>
+    <string name="app_name">TimerApp</string>
     <string name="plus_ten">+10 sec</string>
-    <string name="start">Start</string>
-    <string name="pause">Pause</string>
+    <string name="done">DONE</string>
 </resources>

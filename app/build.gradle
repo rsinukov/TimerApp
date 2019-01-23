@@ -54,5 +54,7 @@ dependencies {
 
     implementation Libraries.appCompat
     implementation Libraries.rxBindingV4
+    implementation Libraries.rxJava
     implementation Libraries.rxAndroid
+    implementation Libraries.timber
 }
