@@ -5,6 +5,7 @@ object Versions {
     const val appCompat = "1.0.0"
     const val design = "1.0.0"
     const val annotations = "1.0.0"
+    const val lifecycle = "2.0.0"
 
     const val rxJava = "2.1.0"
     const val rxBinding = "3.0.0-alpha2"
@@ -40,6 +41,8 @@ object Libraries {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val design = "com.google.android.material:material:${Versions.design}"
     const val androidAnnotations = "androidx.annotation:annotation:${Versions.annotations}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel:${Versions.lifecycle}"
+    const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
 
     // Networking, RxJava
     const val rxJava = "io.reactivex.rxjava2:rxandroid:${Versions.rxJava}"

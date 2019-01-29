@@ -18,5 +18,5 @@ interface FeaturesModule {
     @Binds
     @IntoMap
     @ComponentKey(TimerComponent::class)
-    fun timerComponentComponent(builder: TimerComponent.Builder): ComponentBuilder<*>
+    fun timerComponent(builder: TimerComponent.Builder): ComponentBuilder<*, *, *>
 }

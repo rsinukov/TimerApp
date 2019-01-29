@@ -1,7 +1,7 @@
 package com.rxsinukov.timerapp.screens.timer
 
 import com.rxsinukov.timerapp.di.ComponentBuilder
-import com.rxsinukov.timerapp.di.MyComponent
+import com.rxsinukov.timerapp.di.MviComponent
 import dagger.Subcomponent
 import javax.inject.Scope
 
@@ -12,10 +12,12 @@ annotation class TimerScope
 
 @TimerScope
 @Subcomponent
-interface TimerComponent : MyComponent {
+interface TimerComponent : MviComponent<TimerIntention, TimerState> {
+
+    override fun presenter(): TimerPresenter
 
     fun inject(activity: TimerActivity)
 
     @Subcomponent.Builder
-    interface Builder : ComponentBuilder<TimerComponent>
+    interface Builder : ComponentBuilder<TimerIntention, TimerState, TimerComponent>
 }

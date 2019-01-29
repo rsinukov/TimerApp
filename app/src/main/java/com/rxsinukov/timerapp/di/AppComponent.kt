@@ -13,17 +13,17 @@ import javax.inject.Singleton
         UtilsModule::class
     ]
 )
-interface AppComponent : MyComponent {
+interface AppComponent {
 
     fun inject(componentsHolder: ComponentsHolder)
 
     @Component.Builder
-    interface Builder : ComponentBuilder<AppComponent> {
+    interface Builder {
 
         @BindsInstance
         fun application(@ApplicationContext application: Context): Builder
 
-        override fun build(): AppComponent
+        fun build(): AppComponent
     }
 
 }
