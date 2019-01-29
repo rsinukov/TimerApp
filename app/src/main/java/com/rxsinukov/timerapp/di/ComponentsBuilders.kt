@@ -6,11 +6,11 @@ import androidx.annotation.VisibleForTesting
 import javax.inject.Inject
 import javax.inject.Provider
 
-class ComponentsHolder {
+class ComponentsBuilders {
 
     companion object {
 
-        private val instance = ComponentsHolder()
+        private val instance = ComponentsBuilders()
 
         @JvmStatic // param is here to ensure that no one tries to get instance from BL
         fun getInstance(@Suppress("UNUSED_PARAMETER") context: Context) = instance

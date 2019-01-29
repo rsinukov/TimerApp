@@ -15,7 +15,7 @@ import javax.inject.Singleton
 )
 interface AppComponent {
 
-    fun inject(componentsHolder: ComponentsHolder)
+    fun inject(componentsBuilders: ComponentsBuilders)
 
     @Component.Builder
     interface Builder {

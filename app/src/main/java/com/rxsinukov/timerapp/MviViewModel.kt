@@ -3,7 +3,7 @@ package com.rxsinukov.timerapp
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import com.rxsinukov.timerapp.di.ComponentBuilder
-import com.rxsinukov.timerapp.di.ComponentsHolder
+import com.rxsinukov.timerapp.di.ComponentsBuilders
 import com.rxsinukov.timerapp.di.MviComponent
 
 /**
@@ -19,7 +19,7 @@ class MviViewModel : ViewModel() {
         componentCreator: (ComponentBuilder<Intention, State, Component>) -> Component = { it.build() }
     ): Component {
         if (!::componentInstance.isInitialized) {
-            componentInstance = ComponentsHolder.getInstance(activity).build(componentClass, componentCreator)
+            componentInstance = ComponentsBuilders.getInstance(activity).build(componentClass, componentCreator)
         }
         @Suppress("UNCHECKED_CAST")
         return componentInstance as Component

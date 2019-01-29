@@ -1,13 +1,13 @@
 package com.rxsinukov.timerapp
 
 import android.app.Application
-import com.rxsinukov.timerapp.di.ComponentsHolder
+import com.rxsinukov.timerapp.di.ComponentsBuilders
 
 class TimerApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
-        ComponentsHolder.getInstance(this).initialize(this@TimerApplication)
+        ComponentsBuilders.getInstance(this).initialize(this@TimerApplication)
     }
 }
